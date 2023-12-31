@@ -1,0 +1,117 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(27, 66%, 92%);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.container {
+  margin: 2em 0.5em;
+}
+
+.my-balance {
+  background-color: hsl(10, 79%, 65%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.5em;
+  display: flex;
+  padding: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.balance {
+  font-size: 1.25rem;
+}
+
+.balance :first-child {
+  margin-bottom: 0;
+  font-size: 0.75rem;
+}
+
+.balance :last-child {
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.spending {
+  margin-top: 1em;
+  background-color: hsl(33, 100%, 98%);
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+.days {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.chart {
+  border-bottom: 2px solid hsl(27, 66%, 92%);
+}
+
+.daily-spending {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.day p {
+  text-align: center;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 100%;
+  color: grey;
+}
+
+.monthly {
+  font-size: 0.875rem;
+}
+
+.month-total {
+  font-weight: 700;
+  color: black;
+  font-size: 1.75rem;
+}
+
+.increment {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 0.875rem;
+}
+
+.increment p {
+  text-align: end;
+}
+
+.inc-pct {
+  color: black;
+  font-weight: 700;
+}
+
+.day-mon:hover,
+.day-tue:hover,
+.day-wed:hover,
+.day-thu:hover,
+.day-fri:hover,
+.day-sat:hover,
+.day-sun:hover {
+  opacity: 50%;
+}
+
+@media (min-width: 426px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    min-width: 400px;
+  }
+}
