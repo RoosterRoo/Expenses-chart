@@ -18,8 +18,10 @@ fetch('./data.json')
       .map((spending) => {
         const height = `${0.2 * spending.amount}rem`;
         const day = `
-
         <div class="day">
+            <div class="bar-value">
+              <p>$${spending.amount}</p>
+            </div>
             <div class="day-${spending.day}" 
             style="height: ${height}; 
                     width: 2rem;
@@ -39,5 +41,13 @@ fetch('./data.json')
       })
       .join('');
     document.querySelector('.daily-spending').innerHTML = weekly;
-    // console.log(document.querySelector('.daily-spending'));
+    document.querySelectorAll('div[class^=day-]').forEach((el) => {
+      const prev = el.previousElementSibling;
+      el.addEventListener('click', () => {
+        document
+          .querySelectorAll('.bar-value')
+          .forEach((e) => e.classList.remove('selected'));
+        prev.classList.add('selected');
+      });
+    });
   });
